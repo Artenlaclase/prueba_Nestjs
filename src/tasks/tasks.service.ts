@@ -6,6 +6,7 @@ import {v4} from 'uuid'
 @Injectable()
 export class TasksService {
 
+    //simula base de datos
     private tasks: Task[] = [
         {
             id: '1',
@@ -18,7 +19,7 @@ export class TasksService {
     getAllTasks() {
         return this.tasks;
     }
-    createTasks(title: string, description: string) {
+    createTask(title: string, description: string) {
         const task = {
             id: v4(),
             title,
